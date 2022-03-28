@@ -1,15 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock Paper Scissor Game</title>
-</head>
-<body>
-    <h3>Open the Console and call the game() function!</h3>
-    
+
+    <style>
+      body {
+        background-color: rgb(199, 233, 50);
+      }
+      .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      .main > h3,
+      h4 {
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+
+      textarea {
+        width: 100%;
+        height: 50px;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        background-color: #f8f8f8;
+        font-size: 16px;
+        resize: none;
+      }
+
+      button{
+        padding: 8px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: bold;
+        background-color: azure;
+      }
+
+      button:hover{
+        background-color: rgba(255, 255, 0, 0.329);
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="main">
+      <h3>ROCK-PAPER-SCISSORS</h3>
+      <h4>Machine vs Human</h4>
+      <div class="textbox">
+        <form action="">
+          <textarea placeholder="Rock/Paper/Scissors" id="input"></textarea>
+        </form>
+      </div>
+      <button onclick="playGame()">Play</button>
+    </main>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

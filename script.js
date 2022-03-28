@@ -14,7 +14,7 @@ function playRound(playerSelection, computerSelection) {
     if (computerSelection == "rock") {
         if (x == "paper") {
             console.log("Paper beats rock, You get 1 point!");
-            score +=1 ;
+            score += 1;
         }
 
         else if (x == computerSelection) {
@@ -26,10 +26,10 @@ function playRound(playerSelection, computerSelection) {
         }
     }
 
-    else if(computerSelection == "paper") {
+    else if (computerSelection == "paper") {
         if (x == "scissors") {
             console.log("Scissors beats paper, You get 1 point!");
-            score +=1 ;
+            score += 1;
         }
 
         else if (x == computerSelection) {
@@ -41,7 +41,7 @@ function playRound(playerSelection, computerSelection) {
         }
     }
 
-    else if(computerSelection == "scissors") {
+    else if (computerSelection == "scissors") {
         if (x == "rock") {
             console.log("Rock beats scissors, You get 1 point!");
             score += 1;
@@ -59,13 +59,25 @@ function playRound(playerSelection, computerSelection) {
     return score;
 }
 
-function playgame() {
-    let score1 = 0;
-    for (let i = 0; i < 5; i++) {
-        cs = computerPlay();
-        cp = prompt("Enter (Rock/Paper/Scissor)").toLowerCase();
-        score1 += playRound(cp,cs);
+
+function myFunc() {
+    let score2 = 0;
+    cs = computerPlay();
+    let input = document.getElementById("input").value;
+    score2 += playRound(input, cs);
+    return score2;
+}
+
+let score3 = 0;
+let counter = 0;
+
+function playGame() {
+    if (counter != 5) {
+        score3 += myFunc();
+        counter++;
+    }
+    else if(counter ==5){
+        console.log("Your total score in 5 rounds is " + score3);
     }
 
-    console.log("Total points in 5 rounds = " + score1);
 }
