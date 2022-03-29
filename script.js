@@ -82,7 +82,8 @@ function myFunc() {
     let score2 = 0;
     cs = computerPlay();
     let input = document.getElementById("input").value;
-    score2 += playRound(input, cs);
+    let input1 = input.toLowerCase();
+    score2 += playRound(input1, cs);
     return score2;
 }
 
