@@ -1,5 +1,5 @@
 # Rock Paper Scissor Game Made with JavaScript
 
 
-*Adding UI Feature Soon...*
+*Added basic styles to the page. Will make more developments for this project in the future*
 
